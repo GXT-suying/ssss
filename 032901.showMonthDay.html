@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h3>请输入1月份天数：</h3>
+			<input v-model="month">
+			<h3>请输入2月份天数：</h3>
+			<input v-model="month">
+			{{month}}
+		
+		</div>
+		<script>
+			let v=new Vue({
+				el:'#app',
+				data:{
+				month:''
+					
+				}
+			})
+		</script>
+		
+	</body>
+</html>

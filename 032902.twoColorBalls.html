@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+         <p>随机生成红球为：{{red1}},{{red2}},{{red3}},{{red4}},{{red5}},{{red6}}</p>
+		 <p>随机生成篮球为:{{red7}}</p>
+		 
+			<input type="button" value="按钮" v-on:click="red1=Math.ceil(Math.random()*10);red2=Math.ceil(Math.random()*10);red2=Math.ceil(Math.random()*10);red3=Math.ceil(Math.random()*10);red4=Math.ceil(Math.random()*10);red5=Math.ceil(Math.random()*10);red6=Math.ceil(Math.random()*10);red7=Math.ceil(Math.random()*10)"/>
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					red1:'',
+					red2:'',
+					red3:'',
+					red4:'',
+					red5:'',
+					red6:'',
+					red7:'',
+				}
+			})
+		</script>
+	</body>
+</html>

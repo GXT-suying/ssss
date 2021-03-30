@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<h3>请输入你的学校</h3>
+			<input v-model="mySchool">
+			你的学校是：{{mySchool}}
+			<h3>请输入你的学校的序号：</h3>
+			<input v-model="xuhao">
+			{{xuhao}}
+			<p v-if="xuhao>=1&&xuhao<=41">该学校为985、211学校</p>
+			<p v-if="xuhao>41&&xuhao<=124">该学校是211学校</p>
+		</div>
+		
+		
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					mySchool:'',
+					
+					xuhao:''
+					
+				}
+			})
+		</script>
+	</body>
+</html>
