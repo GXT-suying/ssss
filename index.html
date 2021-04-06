@@ -3,25 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" ></script>
 	</head>
 	<body>
 		<div id="app">
-			<li v-if="score>=90">优秀</li>
-			<li v-if="score>=80 && score <90">良好</li>
-			<li v-if="score>=70 && score <80">中等</li>
-			<li v-if="score>=60 && score <70">及格</li>
-			<li v-if="score<60">不及格</li>
-			{{rdmNumber}}
+			<input v-model="userNumber" type="text"  name="" value="" id="app"/>
+			你输入的是{{userNumber}}月，有{{month[userNumber-1]}}天
 		</div>
 		<script type="text/javascript">
-				let v=new Vue({
-					el: '#app',
-					data:{
-						score:'90',
-						rdmNumber:Math.floor(Math.random()*10)
-					}
-				})
+			let v =new Vue({
+				el:'#app',
+				data:{
+					userNumber:'1',
+					month:[30,28,31,30,31,30,31,31,30,31,30,31]
+				}
+			})
 		</script>
 	</body>
 </html>
