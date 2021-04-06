@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" ></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <div>{{schools[1].name}}</div> 
+			<div>{{schools[1].location}}</div> -->
+			<!-- <input v-model="userNumber" type="text"  name="" value="" id="app"/>
+			你输入的是{{schools[0]}}月，有{{month[userNumber-1]}}天
+			你输入的国家代码是+44，它表示 -->
+			<!-- <p v-for="school in schools">
+				{{school[1].name}}
+				{{school[1].location}}
+			</p> -->
+			
+			<input v-model="userNumber" type="text" />
+			<p v-if="userNumber==86">你输入的国家代码是{{userNumber}},，它表示{{schools[0].name}},首都为{{schools[0].location}}</p>
+			
+			<p v-if="userNumber==44">你输入的国家代码是{{userNumber}},，它表示{{schools[1].name}},首都为{{schools[1].location}}</p>
+			
+			<p v-if="userNumber==1">你输入的国家代码是{{userNumber}},，它表示{{schools[2].name}},首都为{{schools[2].location}}</p>
+			<!-- 你输入的国家代码是{{userNumber}},，它表示{{schools[0].name}},首都为{{schools[0].location}} -->
+			
+		</div>
+		<script type="text/javascript">
+			let v =new Vue({
+				el:'#app',
+				data:{
+					userNumber:'',
+					
+						
+					
+					schools:[
+						{name:'中国', location:'北京'},
+						{name:'英国', location:'伦敦'},
+						{name:'美国', location:'华盛顿'},
+							
+				
+						]
+					
+				}
+			})
+		</script>
+	</body>
+</html>
