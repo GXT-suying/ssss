@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>学校判断方法2</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<h3>请输入你的学校</h3>
+			<input v-model="mySchool">
+			你的学校是：{{mySchool}}
+			<p v-if="mySchool=='清华大学' || mySchool=='北京大学'">该学校为985、211学校</p>
+			<p v-if="mySchool=='东华大学' || mySchool=='南京理工大学'">该学校是211学校</p>
+		</div>
+		<script src="js/vue.js" ></script>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					mySchool:'',
+					
+					
+					
+				}
+			})
+		</script>
+	</body>
+</html>
