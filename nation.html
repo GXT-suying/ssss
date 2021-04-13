@@ -10,11 +10,11 @@
 			
 			
 			<input v-model="userNumber" type="text" />
-			<p v-if="userNumber==86">你输入的国家代码是{{userNumber}},，它表示{{schools[0].name}},首都为{{schools[0].location}}</p>
+			<p v-if="userNumber==86">你输入的国家代码是{{userNumber}},，它表示{{nations[0].name}},首都为{{nations[0].location}}</p>
 			
-			<p v-if="userNumber==44">你输入的国家代码是{{userNumber}},，它表示{{schools[1].name}},首都为{{schools[1].location}}</p>
+			<p v-if="userNumber==44">你输入的国家代码是{{userNumber}},，它表示{{nations[1].name}},首都为{{nations[1].location}}</p>
 			
-			<p v-if="userNumber==1">你输入的国家代码是{{userNumber}},，它表示{{schools[2].name}},首都为{{schools[2].location}}</p>
+			<p v-if="userNumber==1">你输入的国家代码是{{userNumber}},，它表示{{nations[2].name}},首都为{{nations[2].location}}</p>
 			
 		</div>
 		<script type="text/javascript">
@@ -25,7 +25,7 @@
 					
 						
 					
-					schools:[
+					nations:[
 						{name:'中国', location:'北京'},
 						{name:'英国', location:'伦敦'},
 						{name:'美国', location:'华盛顿'},
